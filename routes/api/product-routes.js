@@ -95,13 +95,13 @@ router.put('/:id', (req, res) => {
     })
     .then((productTags) => {
       // get list of current tag_ids
-      console.log(productTags);
+      // console.log(productTags);
       const productTagIds = productTags.map(({ tag_id }) => tag_id);
-      console.log(productTagIds);
+      // console.log(productTagIds);
       // create filtered list of new tag_ids
       const newProductTags = req.body.tagIds
-      console.log(newProductTags)
-      console.log(req.body)
+      // console.log(newProductTags)
+      // console.log(req.body)
         .filter((tag_id) => !productTagIds.includes(tag_id))
         .map((tag_id) => {
           return {
